@@ -1,0 +1,29 @@
+* {
+    margin: 10px;
+}
+
+
+body {
+    background-color: white;
+}
+
+h1 {
+    color: black;
+}
+
+b {
+    color: black;
+}
+
+#route {
+    color: green;
+}
+
+.title {
+    color: black;
+}
+
+#missing {
+    color: black;
+    text-decoration: dotted;
+}

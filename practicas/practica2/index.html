@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Yusef López">
+    <meta name="description" content="Practica 2">
+    <meta name="keywords" content="kodmeia,HTML,maquetado,practica">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Practica 2 CSS Spotify</title>
+
+<body>
+    <header><img
+            src="data:image/png;base64,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"
+            alt="spoo" width="100px">
+    </header>
+
+    <nav>Legal</nav>
+    <nav>Términos y Condiciones de Uso</nav>
+    <nav>Política de Copyright</nav>
+
+    <section>
+        <a href="">
+            <h1>Términos de uso de Spotify</h1>
+        </a>
+
+        <p><a id="route" href="">1. Introducción</a></p>
+        <p><a id="route" href="">2. El Servicio de Spotify que proporcionamos</a></p>
+        <p><a id="route" href="">3. El uso del Servicio de Spotify</a></p>
+        <p><a id="route" href="">4. Derechos de propiedad intelectual y de contenido</a></p>
+        <p><a id="route" href="">5. Servicio de atención al cliente, información, preguntas y quejas</a></p>
+        <p><a id="route" href="">6. Problemas y conflictos</a></p>
+        <p><a id="route" href="">7. Acerca de estos Términos</a></p>
+    </section>
+
+
+    <article>
+        <b><a href="">
+                <h1>1. Introducción</h1>
+            </a></b>
+        <p>Lea atentamente los Términos de uso (los "Términos"), ya que rigen el uso de los servicios
+            personalizados de Spotify (incluido el acceso a los mismos) para escuchar música y otros
+            contenidos, incluidos todos los sitios web y aplicaciones de software que incorporan los
+            Términos o se vinculan a ellos (en conjunto, el "Servicio de Spotify") y toda la música,
+            los videos, los podcasts u otro material disponible en el Servicio de Spotify
+            (el "Contenido").</p>
+
+        <p>El uso del Servicio de Spotify puede estar sujeto a otros términos y condiciones
+            proporcionados por Spotify, los que se incorporan a estos Términos mediante esta
+            referencia.</p>
+
+        <p>Al registrarse en el Servicio de Spotify, o utilizarlo, usted acepta los Términos. Si no
+            está de acuerdo con los Términos, no debe utilizar el Servicio de Spotify ni acceder a
+            cualquier Contenido.</p>
+
+        <b><a id="missing" href="">Proveedor de servicios</a></b>
+        <p>Los Términos son acordados entre usted y Spotify AB, Regeringsgatan 19, 111, 53,
+            Estocolmo, Suecia.</p>
+
+        <b><a id="missing" href="">Edad y requisitos de idoneidad</a></b>
+        <p>Para utilizar el Servicio de Spotify y acceder a cualquier Contenido, usted debe (1)
+            tener al menos 13 años (o la edad mínima equivalente en su país), (2) contar con el
+            consentimiento de un padre, madre o tutor si en su país se lo considera menor de edad,
+            (3) ser capaz de celebrar un contrato vinculante con nosotros sin que se lo prohíban las
+            leyes pertinentes y (4) residir en un país en el cual esté disponible el Servicio. Además,
+            usted promete que toda la información de registro que le entregue a Spotify es verdadera,
+            precisa y completa, y se compromete a que esto se mantenga así. Si es menor de edad en su
+            país, su padre, madre o tutor debe aceptar estos Términos en su nombre. Puede encontrar más
+            información acerca de los requisitos de edad en el proceso de registro. Si usted no cumple
+            con los requisitos de edad mínimos, no se puede registrar como usuario en Spotify.</p>
+
+        <h1><b><a class="title" href="">2. El Servicio de Spotify que proporcionamos</a></b></h1>
+        <b><a id="missing" href="">Opciones del Servicio de Spotify</a></b>
+        <p>Le proporcionamos varias opciones en el Servicio de Spotify. Algunas opciones del Servicio de Spotify se
+            proporcionan de manera gratuita, mientras que para otras se debe pagar antes de poder acceder (las
+            "Suscripciones pagas"). Además, es posible que le ofrezcamos planes promocionales, membresías o servicios
+            especiales, incluidos productos y servicios de terceros. No nos hacemos responsables de los productos y
+            servicios proporcionados por terceros.</p>
+        <p>El Servicio ilimitado puede no estar disponible para todos los usuarios. Le explicaremos qué servicios están
+            disponibles para usted en el momento en que se registre en dichos servicios. Si cancela su suscripción al
+            Servicio ilimitado, o si su suscripción se ve interrumpida (por ejemplo, si cambia sus detalles de pago), es
+            posible que no se pueda volver a suscribir al Servicio ilimitado. Tenga en cuenta que es posible que el
+            Servicio
+            ilimitado deje de proporcionarse en el futuro; si esto es así, no se le seguirá cobrando el Servicio.</p>
+
+        <b><a id="missing" href="">Pruebas</a></b>
+        <p>De vez en cuando, es posible que nosotros u otros en nuestro nombre ofrezcamos pruebas de las Suscripciones
+            pagas
+            por un período específico de forma gratuita o a una tarifa reducida (una "Prueba"). Al utilizar un Servicio
+            de
+            Spotify, usted acepta los Términos de la Oferta promocional de Spotify Premium.</p>
+
+        <b><a id="missing" href="">Aplicaciones, dispositivos y software de código abierto de terceros</a></b>
+        <p>Es posible que el Servicio de Spotify se integre en aplicaciones, sitios web y servicios de terceros
+            <b>("Aplicaciones de terceros")</b>, y también en computadoras personales, teléfonos celulares, tabletas,
+            dispositivos
+            portátiles, bocinas y otros dispositivos de terceros <b>("Dispositivos")</b> o que interactúe con ellos. El
+            uso
+            de las
+            Aplicaciones de terceros y los Dispositivos puede estar sujeto a términos, condiciones y políticas
+            adicionales
+            que proporcionen los terceros correspondientes. Spotify no garantiza que las Aplicaciones de terceros y los
+            Dispositivos serán compatibles con el Servicio de Spotify.
+        </p>
+
+        <b><a id="missing" href="">Limitaciones y modificaciones del Servicio</a></b>
+        <p>Realizamos todos los esfuerzos razonables para mantener el Servicio de Spotify en funcionamiento y
+            proporcionarle
+            una experiencia de audio personalizada y envolvente. Sin embargo, las ofertas de nuestro servicio y su
+            disponibilidad pueden cambiar de vez en cuando, según las leyes pertinentes y sin responsabilidades hacia
+            usted,
+            por ejemplo:</p>
+        <p>°Es posible que los Servicios de Spotify experimenten interrupciones temporales debido a dificultades
+            técnicas,
+            mantenimiento, pruebas o actualizaciones, incluidas las necesarias para reflejar los cambios en las leyes y
+            los
+            requisitos normativos pertinentes.</p>
+        <p>°Nuestro objetivo es evolucionar y mejorar nuestros Servicios de forma constante, por lo que es posible que
+            modifiquemos el Servicio de Spotify en parte o su totalidad (incluidos funciones características, planes de
+            suscripción y ofertas promocionales en particular), lo suspendamos o dejemos de proporcionarlo (de manera
+            temporal o permanente).</p>
+        <p>°Spotify no está obligado a proporcionar ningún contenido específico mediante el Servicio de Spotify y es
+            posible
+            que Spotify u otros dueños correspondientes eliminen canciones, videos, podcasts y otros Contenidos en
+            particular sin previo aviso.</p>
+        <p>Si pagó previamente tarifas directamente a Spotify por alguna Suscripción paga que Spotify deje de
+            proporcionar
+            antes de su Período prepagado (según se define el término en la sección de Pagos y cancelaciones a
+            continuación), Spotify le reembolsará las tarifas prepagadas correspondientes al Período prepagado por la
+            parte
+            no utilizada de su Suscripción pagada vigente después de que se deje de proporcionar. La información de
+            facturación y de su cuenta debe estar actualizada para que podamos reembolsarle las tarifas.</p>
+        <p>Spotify no tiene ninguna responsabilidad ante usted, ni ninguna obligación de proporcionarle un reembolso en
+            relación con cortes o fallas de internet u otros servicios, causados por las acciones de las autoridades
+            gubernamentales, de otros terceros o de eventos que escapen a nuestro control.</p>
+
+        <h1><b><a class="title" href="">3. El uso del Servicio de Spotify</a></b></h1>
+        <p><b><a id="missing" href="">Crear una cuenta de Spotify</a></b></p>
+        <p>Es posible que deba crear una cuenta de Spotify para utilizar el Servicio de Spotify de forma parcial o
+            total. Su
+            nombre de usuario y contraseña son únicamente para su uso personal y deben ser confidenciales. Usted
+            comprende
+            que es responsable de todo uso (incluido el uso no autorizado) de su nombre de usuario y contraseña.
+            Notifique
+            de forma inmediata a nuestro equipo de servicio de atención al cliente si perdió o le robaron su nombre de
+            usuario o contraseña, o si piensa que alguien ingresó a su cuenta sin autorización.</p>
+        <p>Spotify puede recuperar su nombre de usuario, o solicitarle que lo cambie, por cualquier motivo.</p>
+        <b>
+            <p><a id="missing" href="">Sus derechos de uso del Servicio de Spotify</a></p>
+        </b>
+        <p>Le otorgamos un permiso limitado, no exclusivo y revocable para hacer uso personal y no comercial del
+            Servicio de
+            Spotify y su Contenido (en conjunto,<b>"Acceso"</b>), sujeto a su cumplimiento de los Términos (incluido
+            cualquier
+            otro término y condición pertinente). Este Acceso permanecerá vigente, a menos que usted o Spotify lo
+            rescindan
+            o hasta que eso suceda. Acepta que no redistribuirá ni transferirá el Servicio de Spotify o su Contenido.
+        </p>
+
+        <p>Las aplicaciones de software de Spotify y el Contenido tienen licencia, no se venden ni transfieren a usted,
+            y
+            Spotify y sus licenciatarios retienen la propiedad de todas las copias en las aplicaciones de software de
+            Spotify y el Contenido, incluso después de instalarlos en sus Dispositivos.</p>
+
+        <a id="missing" href="">Derechos de propiedad de Spotify</a>
+        <p>El Servicio de Spotify y su Contenido son propiedad de Spotify o de los licenciatarios de Spotify. Todas las
+            marcas comerciales, las marcas de servicio, los nombres registrados, los logotipos, los nombres de dominio y
+            cualquier otra función de la marca Spotify (las "Funciones de la marca Spotify") son propiedad exclusiva de
+            Spotify o de sus licenciatarios. Los Términos no le otorgan ningún derecho para utilizar ninguna de las
+            Funciones de la marca Spotify, ya sea para uso comercial o no comercial.</p>
+        <p>Acepta cumplir con las <a id="missing" href="">Pautas de usuario de Spotify</a> y no usar el Servicio de
+            Spotify, el
+            Contenido
+            ni cualquier
+            parte de este de ninguna manera que no esté permitida por los Términos de forma expresa.</p>
+        <a id="missing" href="">
+            <p>Pagos y cancelación</p>
+        </a>
+        <a id="missing" href="">Facturación</a>
+        <p>Puede comprar una Suscripción pagada directamente a Spotify o a través de un tercero de las siguientes
+            maneras:
+        </p>
+        <p>°pagando una tarifa de suscripción adelantada de forma mensual o mediante otro intervalo recurrente
+            establecido
+            antes de su compra; o</p>
+        <p>°mediante un prepago que le otorgue acceso al Servicio de Spotify durante un período específico (<b>"Período
+                prepagado"</b>).</p>
+
+        <p>Las tarifas de impuestos se calculan en función de la información que proporcione y la tarifa pertinente en
+            el
+            momento de su cobro mensual.</p>
+
+        <p>Si compra el acceso a una Suscripción pagada a través de terceros, es posible que se apliquen términos y
+            condiciones por separado con dicho tercero a su uso del Servicio de Spotify, además de estos Términos. Si
+            compra
+            una Suscripción pagada a través de un código, una tarjeta de regalo, una oferta prepaga u otras ofertas que
+            proporcione o venda Spotify o en su nombre para acceder a una Suscripción pagada (<b> "Códigos"</b>), usted
+            acepta los
+            <a id="missing" href="">Términos de tarjetas de Spotify.</a>
+        </p>
+
+        <a id="missing" href="">Cambios de precios y tarifas</a>
+
+        <p>Es posible que Spotify cambie de vez en cuando el precio de las Suscripciones pagadas, incluidos las tarifas
+            de
+            suscripción recurrentes, los Períodos prepagados (para los períodos no pagados aún) o los Códigos (definidos
+            anteriormente) y le notificará cualquier cambio de precios con una anticipación razonable. Los cambios de
+            precio
+            comenzarán a tener vigencia a principios del próximo período de suscripción, después de la fecha del cambio
+            de
+            precio. Si sigue utilizando el Servicio de Spotify después de que el cambio de precio comience a tener
+            vigencia,
+            usted acepta el nuevo precio, sujeto a las leyes pertinentes. Si no está de acuerdo con el cambio de precio,
+            puede rechazarlo mediante la cancelación de su suscripción a la Suscripción pagada correspondiente, antes de
+            que
+            el cambio de precio comience a tener vigencia.</p>
+        <b>Las tarifas de impuestos se basan en las tarifas pertinentes en el momento de su cobro mensual. Estas
+            cantidades
+            pueden cambiar a través del tiempo según los requisitos de impuestos locales de su país, estado, territorio
+            o
+            incluso ciudad. Cualquier cambio en las tarifas de impuestos se aplicará de forma automática de acuerdo con
+            la
+            información de cuenta que usted proporcione.</b>
+
+        <a id="missing" href="">Renovación y cancelación</a>
+        <p>Su pago a Spotify o a terceros a través de los cuales haya adquirido la Suscripción pagada se renovará de
+            forma
+            automática al final del período de suscripción correspondiente, a menos que cancele su Suscripción pagada
+            antes
+            de que finalice el período de suscripción en curso, salvo en el caso de las Suscripciones pagadas de un
+            Período
+            prepagado. Comuníquese con nuestro equipo de Servicio de atención al cliente aquí para obtener instrucciones
+            sobre cómo cancelar. La cancelación comenzará a tener vigencia el día después del último día de su período
+            de
+            suscripción actual y volverá a la versión gratuita del Servicio de Spotify. No proporcionamos reembolsos o
+            créditos por ningún período de suscripción parcial, salvo que se indique expresamente en estos Términos.</p>
+        <p>Si compró una Suscripción pagada mediante el uso de un Código, su suscripción rescindirá de forma automática
+            cuando el período establecido en el Código se termine, o cuando haya un balance de prepago insuficiente para
+            pagar el Servicio de Spotify.</p>
+
+        <a id="missing" href="">Derecho de revocación</a>
+        <p>Si se registra en una Prueba, usted acepta que el derecho de revocación de la Suscripción pagada mediante la
+            cual
+            usted recibe una Prueba termina catorce (14) días después de que comience la Prueba. Si no cancela la
+            Suscripción pagada antes de que termine la Prueba, usted pierde su derecho de revocación y autoriza a
+            Spotify a
+            cobrarle de forma automática el precio acordado cada mes hasta que cancele la Suscripción pagada. En el caso
+            de
+            pruebas de menos de catorce (14) días, usted nos entrega su consentimiento de forma expresa para que le
+            proporcionemos el servicio pagado de forma inmediata después de que su Prueba termine y desde ese momento
+            usted
+            pierde su derecho de revocación.</p>
+        <p>Si compra una Suscripción pagada sin Prueba, usted acepta que tiene catorce (14) días a partir de la compra
+            para
+            revocarla por cualquier motivo y debe pagarnos por los servicios que le proporcionamos hasta el momento en
+            que
+            nos notifique que cambió de opinión. . Usted nos otorga su consentimiento de forma expresa para que le
+            proporcionemos el servicio inmediatamente después de la compra, para que pierda su derecho de revocación y
+            autoriza a Spotify a cobrarle de forma automática cada mes hasta que cancele el servicio.</p>
+
+        <b><a id="missing" href="">Pautas del usuario</a></b>
+        <p>Establecimos pautas de uso del Servicio de Spotify, para asegurar que todos puedan disfrutar el Servicio de
+            Spotify (<b>"Pautas de usuario de Spotify"</b>). Cuando utiliza el Servicio de Spotify debe cumplir con las
+            Pautas de
+            usuario de Spotify, así como con las leyes, normas y regulaciones pertinentes, y respetar la propiedad
+            intelectual, la privacidad y otros derechos de terceros.</p>
+
+        <b><a id="missing" href="">Cuentas de marcas</a></b>
+        <p>Si establece una cuenta de Spotify en representación de una empresa, organización, entidad o marca (una
+            "Marca" y
+            la cuenta una "Cuenta de marca"), los términos "usted" y "su", según el uso que se le da en estos Términos
+            (incluidos otros términos y condiciones de Spotify que se incluyen en este acuerdo mediante referencia), se
+            aplican tanto a usted como a la Marca.</p>
+        <p>Si crea una Cuenta de marca, usted representa y garantiza que está autorizado para otorgar los permisos y las
+            licencias que se proporcionan en los Términos (incluido cualquier otro término y condición de Spotify
+            pertinente) y a vincular la Marca a los Términos.</p>
+
+        <p>Una Marca puede seguir usuarios y crear y compartir playlists, siempre y cuando la Marca no realice ninguna
+            acción que implique un patrocinio o una relación comercial entre la Marca y el usuario, artista, compositor
+            o
+            cualquier otra persona seguidos, a menos que la Marca haya obtenido los derechos para implicar tal
+            patrocinio de
+            manera independiente. Además, las Marcas deben ser transparentes ante nuestros usuarios acerca de la
+            autorización de cualquier patrocinio o consideración que se proporcione a artistas, compositores, usuarios u
+            otros y debe cumplir con todas las leyes, las regulaciones y los códigos de práctica pertinentes cuando se
+            involucren en las prácticas anteriores.</p>
+
+        <a id="missing" href="">Control de exportación y sanciones</a>
+        <p>Los productos de Spotify pueden estar sujetos a leyes y regulaciones de control de exportación y
+            reexportación de
+            EE. UU. o leyes similares pertinentes en otras jurisdicciones, incluidas las Regulaciones de Administración
+            de
+            Exportaciones ("EAR", por sus siglas en inglés) mantenidas por el Departamento de Comercio de EE.UU., las
+            sanciones económicas y de intercambio mantenidas por el departamento de Tesorería de la Oficina de Control
+            de
+            Activos Extranjeros ("OFAC", por sus siglas en inglés) y las Regulaciones de Tráfico de Armas
+            Internacionales
+            ("ITAR", por sus siglas en inglés) mantenidas por el Departamento de Estado. Usted garantiza que (1) no se
+            encuentra en ningún país al que Estados Unidos le haya embargado bienes o que haya aplicado alguna sanción
+            económica y (2) que no es una parte denegada según se especifica en cualquier ley o regulación de
+            reexportación
+            o leyes similares aplicables en otras jurisdicciones u otros enumerados en cualquier lista de partes
+            prohibidas
+            o restringidas por el gobierno de EE.UU.</p>
+        <p>Usted acepta cumplir con las leyes y regulaciones de control de exportaciones y reexportaciones, incluidas,
+            entre
+            otras, las EAR y las sanciones económicas y de intercambio que mantiene la OFAC. Específicamente, acepta que
+            no
+            venderá, exportará, reexportará, transferirá, desviará, lanzará ni dispondrá de cualquier producto, software
+            o
+            tecnología (incluidos los productos derivados o basados en dicha tecnología), de manera directa o indirecta,
+            que
+            reciba de parte de Spotify conforme a los Términos a cualquier destino, entidad o persona prohibida por las
+            EAR,
+            las sanciones económicas y de intercambio mantenidas por la OFAC o cualquier otra ley o regulación
+            pertinente de
+            los Estados Unidos o cualquier otra jurisdicción sin obtener una autorización previa obligatoria de las
+            autoridades gubernamentales competentes conforme a dichas leyes y regulaciones.</p>
+
+        <h1><b><a class="title" href="">4. Derechos de propiedad intelectual y de contenido</a></b></h1>
+        <b><a id="missing" href="">Contenido de usuario</a></b>
+        <b><a id="missing" href="">El contenido que usted publica en el servicio</a></b>
+        <p>Los usuarios de Spotify pueden publicar, subir o aportar contenido al Servicio de Spotify (<b>"Contenido de
+                usuario"</b>). Para evitar dudas, el término "<b>Contenido de usuario</b>" incluye toda la información,
+            los
+            materiales y
+            otro contenido que los usuarios agregan, crean, suben, envían, distribuyen o publican en el Servicio de
+            Spotify
+            (incluida a la <a href="">Comunidad de soporte de Spotify</a>).</p>
+        <p>Usted es el único responsable del Contenido de usuario que publica.</p>
+        <p>Usted promete que, con respecto al Contenido de usuario que publica en Spotify, (1) es propietario de dicho
+            Contenido de usuario o tiene el derecho de publicarlo; (2) dicho Contenido de usuario o el uso que le da
+            Spotify
+            según la licencia otorgada a continuación, no (i) infringe los Términos, las leyes pertinentes o la
+            propiedad
+            intelectual u otros derechos de cualquier tercero, o (ii) dicho Contenido de usuario no implica ninguna
+            autorización o afiliación de usted o su Contenido de usuario por parte de Spotify o cualquier artista,
+            banda,
+            disquera u otros individuos o entidades sin un consentimiento escrito previo por parte de Spotify o dicho
+            individual o entidad.</p>
+        <p>Al publicar o compartir Contenido de usuario u otra información en el Servicio de Spotify, tenga en cuenta
+            que el
+            público podrá acceder al contenido y a otra información, y que otros pueden utilizarlo y volver a
+            compartirlo en
+            el Servicio de Spotify y en la Web. Por este motivo, le pedimos que tenga cuidado al publicar o compartir en
+            el
+            Servicio Spotify, y que sea consciente de la configuración de su cuenta. Spotify no se hace responsable de
+            lo
+            que usted u otros publican o comparten en el Servicio de Spotify.</p>
+
+        <a id="missing" href="">Supervisión del contenido de usuario</a>
+        <p>Spotify puede supervisar y revisar el Contenido de usuario autorizado, aunque no está obligado a hacerlo.
+            Spotify
+            se reserva el derecho de eliminar o deshabilitar el acceso a cualquier Contenido de usuario por cualquier
+            razón
+            o aunque no la tenga. Spotify puede realizar estas acciones sin aviso previo.</p>
+        <b><a id="missing" href="">Licencias que nos proporciona</a></b>
+        <p>Contenido de usuario</p>
+        <p>Usted conserva la propiedad de su Contenido de usuario cuando lo publica en el Servicio. Sin embargo, para
+            que su
+            Contenido de usuario esté disponible en el Servicio de Spotify, necesitamos una licencia de ese Contenido de
+            usuario de su parte. De acuerdo con eso, usted otorga de ahora en adelante a Spotify una licencia mundial,
+            irrevocable, completamente pagada, sin regalías, sublicenciable, transferible y no exclusiva para reproducir
+            cualquier Contenido de usuario, hacerlo disponible, presentarlo y mostrarlo, traducirlo, modificarlo, crear
+            obras derivadas del mismo, distribuirlo o usarlo de otra manera a través de cualquier medio, ya sea solo o
+            combinado con otro Contenido o material, de cualquier manera, con cualquier método o tecnología, ya sea
+            conocida
+            en la actualidad o creada en el futuro, en relación con el Servicio de Spotify. En los casos en que
+            corresponda
+            y lo permita la ley pertinente, también acepta renunciar y no hacer cumplir ningún "derecho moral" o
+            derechos
+            equivalentes, tales como el de que se lo identifique como autor de cualquier Contenido de usuario
+            autorizado,
+            incluidos los Comentarios, y su derecho a oponerse al tratamiento despectivo de dicho Contenido de usuario.
+        </p>
+        <p>Comentarios</p>
+        <p>Si proporciona ideas, sugerencias u otro tipo de comentarios en relación con su uso del Servicio de Spotify o
+            cualquier Contenido ("Comentarios"), tales Comentarios no son confidenciales y Spotify puede usarlos sin
+            restricción ni pago. Los Comentarios se consideran un tipo de Contenido de usuario en función de estos
+            Términos.
+        </p>
+        <p>Su dispositivo</p>
+        <p>También nos otorga el derecho de (1) permitir al Servicio de Spotify usar el procesador, ancho de banda y
+            hardware de almacenamiento en su Dispositivo para facilitar el funcionamiento del Servicio de Spotify, (2)
+            proporcionarle anuncios y otra información y permitirle a nuestros socios comerciales hacer lo mismo, de
+            acuerdo
+            con la Política de Privacidad de Spotify.</p>
+
+        <p><b><a id="missing" href="">Experiencia de contenido</a></b></p>
+        <b>Es posible que el Contenido al que acceda en cualquier parte del Servicio de Spotify, incluidos la selección
+            y el
+            posicionamiento, esté influenciado por las consideraciones comerciales, incluidos los acuerdos de Spotify
+            con
+            terceros.</b>
+        <p>Es posible que algunos Contenidos de los cuales Spotify tenga licencia o que proporcione, cree o ponga a
+            disposición (por ejemplo, podcasts) incorporen anuncios por los cuales Spotify no se hace responsable.</p>
+
+        <b><a id="missing" href="">Reclamo de infracciones</a></b>
+        <p>Spotify respeta los derechos de los propietarios de la propiedad intelectual. Si cree que cualquier Contenido
+            infringe sus derechos de autor, consulte la Política de derechos de autor de Spotify.</p>
+    </article>
+
+</body>
+
+
+
+</head>
+
+</html>
